@@ -1,20 +1,15 @@
-.btn-default,.btn-default:hover,.btn-default:focus {
-    color: #fff;
-    text-shadow: none;
-    background-color: #000;
-    border: 1px solid #000;
-}
+@color: #000;
 
 html,body {
     height: 100%;
     background: #fff;
-    color: #000;
+    color: @color;
     text-align: center;
     font-family: 'ProximaNova', Arial, sans-serif;
 }
 
 a,a:hover {
-    color: #000;
+    color: @color;
     font-weight: 500;
 }
 
@@ -43,6 +38,13 @@ a:hover {
     padding: 30px;
 }
 
+.btn-default,.btn-default:hover,.btn-default:focus {
+    color: #fff;
+    text-shadow: none;
+    background-color: @color;
+    border: 1px solid @color;
+}
+
 .masthead-brand {
     margin-top: 10px;
     margin-bottom: 10px;
@@ -61,7 +63,7 @@ a:hover {
     padding-left: 0;
     font-size: 16px;
     font-weight: bold;
-    color: #000;
+    color: @color;
     color: rgba(0,0,0,.75);
     border-bottom: 2px solid transparent;
 }
@@ -72,8 +74,8 @@ a:hover {
 }
 
 .masthead-nav > .active > a,.masthead-nav > .active > a:hover,.masthead-nav > .active > a:focus {
-    color: #000;
-    border-bottom-color: #000;
+    color: @color;
+    border-bottom-color: @color;
 }
 
 @media (min-width:768px) {
