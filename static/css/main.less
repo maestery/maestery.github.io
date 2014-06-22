@@ -34,21 +34,21 @@
         url('../fonts/proximanova-bold-webfont.ttf') format('truetype');
 }
 
-body {
-    background: #333;
-    font-family: 'ProximaNova', Arial, sans-serif;
-}
-
-a {
-    font-weight: 500;
-}
-
 .logo(@size) {
-    background: url('../img/maester-logo.png');
     background-size: @size @size;
     width: @size;
     height: @size;
     margin: 0 auto;
+}
+
+.logo-light(@size) {
+    background: url('../img/maester-logo.png');
+    .logo(@size)
+}
+
+.logo-dark(@size) {
+    background: url('../img/maester-logo-dark.png');
+    .logo(@size)
 }
 
 .small-logo {
@@ -57,6 +57,14 @@ a {
 
 .large-logo {
     .logo(@large);
+}
+
+.small-logo.dark {
+    .logo-dark(@small);
+}
+
+.large-logo.dark {
+    .logo-dark(@large);
 }
 
 .inline {
